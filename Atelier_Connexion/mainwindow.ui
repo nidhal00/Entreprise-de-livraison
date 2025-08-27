@@ -1,0 +1,1493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1355</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion des Clients</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(252, 252, 252);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>251</width>
+      <height>741</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    background-color: #ADD8E6;   
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 15px;        /* Coins arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 16px;            /* Taille du texte */
+    padding: 5px;               /* Espacement interne */</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>20</y>
+      <width>1071</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="pagecommande">
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>20</y>
+        <width>321</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #ADD8E6;   
+    border: 2px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+}</string>
+      </property>
+      <property name="text">
+       <string>  Gestion de Commandes</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>651</width>
+        <height>371</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>630</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Stats</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>90</y>
+        <width>371</width>
+        <height>621</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: #ADD8E6;   
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 15px;        /* Coins arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 16px;            /* Taille du texte */
+    padding: 5px;               /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>110</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Ajout/Modification</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>630</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>PDF</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>660</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Confirmer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_11">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>660</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Annuler</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>661</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: #ADD8E6;   
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 15px;        /* Coins arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 16px;            /* Taille du texte */
+    padding: 5px;               /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>100</y>
+        <width>521</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_12">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>100</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_13">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>630</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>QR CODE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_14">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>630</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>MAILING</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_15">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>550</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Tri</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>550</y>
+        <width>471</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>date</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>client</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>prix le plus eleve</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="lineEditNomPrix">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>240</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>370</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 25px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>Date </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>300</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 25px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>Statut</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>240</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 25px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>Prix</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>180</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 25px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>ID Client</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditNomID">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>180</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxGouvernerat_2">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>300</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>En Cours</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>livrée</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Annulé</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>En attente</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>370</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QPushButton" name="pushButton_16">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>620</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>SMS</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_17">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>620</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Appel</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonStat">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>620</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Stats</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_19">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>540</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Tri</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Supprimer">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>90</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Annuler">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>670</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Annuler</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>10</y>
+        <width>331</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #ADD8E6;   
+    border: 2px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+}</string>
+      </property>
+      <property name="text">
+       <string>       Gestion de Clients</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_22">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>100</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Ajout/Modification</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>540</y>
+        <width>471</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>date</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>client</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>prix le plus eleve</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_23">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>620</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>PDF</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>651</width>
+        <height>371</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Confirmer">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>670</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <property name="text">
+       <string>Confirmer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>661</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: #ADD8E6;   
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 15px;        /* Coins arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 16px;            /* Taille du texte */
+    padding: 5px;               /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>80</y>
+        <width>371</width>
+        <height>651</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: #ADD8E6;   
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 15px;        /* Coins arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 16px;            /* Taille du texte */
+    padding: 5px;               /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditNom">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>170</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditPrenom">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>230</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditEmail">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>290</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditTelephone">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>350</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditRue">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>470</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditVille">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>530</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditCode">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>590</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>160</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 25px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>Nom</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>220</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 25px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>Prenom</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>280</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 25px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>Email</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>340</y>
+        <width>181</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 22px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>Telephone </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>460</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 25px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>RUE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>520</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 25px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>Ville</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>580</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 18px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>code postal</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>400</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: transparent;    /* Pas de fond */
+    border: none;                     /* Pas de contour */
+    color: black;                     /* Couleur du texte */
+    font-size: 18px;                  /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;/* Police artistique */
+    font-style: italic;               /* Italique */
+    padding: 8px;                     /* Espacement interne */</string>
+      </property>
+      <property name="text">
+       <string>Gouvernerat</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxGouvernerat">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>410</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Tunis</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ariana</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ben Arous</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bizerte</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mahdia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Monastir</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="lineEditRecherche">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>90</y>
+        <width>521</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 15px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+      </property>
+     </widget>
+     <zorder>label_7</zorder>
+     <zorder>label_6</zorder>
+     <zorder>pushButton_16</zorder>
+     <zorder>pushButton_17</zorder>
+     <zorder>pushButtonStat</zorder>
+     <zorder>pushButton_19</zorder>
+     <zorder>Supprimer</zorder>
+     <zorder>Annuler</zorder>
+     <zorder>label_5</zorder>
+     <zorder>pushButton_22</zorder>
+     <zorder>comboBox_2</zorder>
+     <zorder>pushButton_23</zorder>
+     <zorder>tableView_2</zorder>
+     <zorder>Confirmer</zorder>
+     <zorder>lineEditNom</zorder>
+     <zorder>lineEditPrenom</zorder>
+     <zorder>lineEditEmail</zorder>
+     <zorder>lineEditTelephone</zorder>
+     <zorder>lineEditRue</zorder>
+     <zorder>lineEditVille</zorder>
+     <zorder>lineEditCode</zorder>
+     <zorder>label_8</zorder>
+     <zorder>label_9</zorder>
+     <zorder>label_10</zorder>
+     <zorder>label_11</zorder>
+     <zorder>label_13</zorder>
+     <zorder>label_14</zorder>
+     <zorder>label_15</zorder>
+     <zorder>label_16</zorder>
+     <zorder>comboBoxGouvernerat</zorder>
+     <zorder>lineEditRecherche</zorder>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>229</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+    </property>
+    <property name="text">
+     <string>Clients</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>280</y>
+      <width>229</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+    </property>
+    <property name="text">
+     <string>Commandes</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>380</y>
+      <width>229</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+    </property>
+    <property name="text">
+     <string>Vehicules</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>480</y>
+      <width>229</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+    background-color: #FCFCFC;   /* Fond rose pastel */
+    border: 1px solid black;    /* Contour noir */
+    border-radius: 8px;         /* Coins légèrement arrondis */
+    color: black;               /* Couleur du texte */
+    font-size: 20px;            /* Taille du texte */
+    font-family: &quot;Lucida Handwriting&quot;;  /* Police artistique */
+    font-style: italic;         /* Optionnel : style italique */
+    padding: 8px;               /* Espacement interne */
+</string>
+    </property>
+    <property name="text">
+     <string>Livreurs</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
