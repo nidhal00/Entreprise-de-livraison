@@ -7,8 +7,8 @@ Connection::Connection() {}
 bool Connection::createConnection() {
     QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
     db.setDatabaseName("Source_Projet2A"); // Nom du DSN ODBC
-    db.setUserName("ines");                // Nom d'utilisateur
-    db.setPassword("zamankii");            // Mot de passe
+    db.setUserName("nidhal");                // Nom d'utilisateur
+    db.setPassword("gouader");            // Mot de passe
 
     if (!db.open()) {
         qDebug() << "Échec de la connexion à la base de données :" << db.lastError().text();
